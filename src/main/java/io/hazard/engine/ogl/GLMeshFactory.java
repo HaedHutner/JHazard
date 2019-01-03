@@ -7,6 +7,11 @@ import io.hazard.engine.api.graphics.MeshFactory;
 @Singleton
 public class GLMeshFactory implements MeshFactory<GLMesh> {
     @Override
+    public GLMesh fromResource(String resourcePath) {
+        return null;
+    }
+
+    @Override
     public GLMesh fromFile(String path) {
         return null;
     }

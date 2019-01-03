@@ -3,6 +3,7 @@ package io.hazard.engine.common.graphics;
 import io.hazard.engine.api.graphics.Layer;
 import io.hazard.engine.api.graphics.Renderable;
 import io.hazard.engine.api.graphics.Renderer;
+import io.hazard.engine.api.graphics.Shader;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,11 +12,11 @@ public class HazardLayer<T extends Renderable> implements Layer<T> {
 
     private String id;
 
-    private Renderer<T> renderer;
+    private Renderer<T, Shader> renderer;
 
     private Set<T> renderables = new HashSet<>();
 
-    public HazardLayer(String id, Renderer<T> renderer) {
+    public HazardLayer(String id, Renderer<T, Shader> renderer) {
         this.id = id;
         this.renderer = renderer;
     }
@@ -26,7 +27,7 @@ public class HazardLayer<T extends Renderable> implements Layer<T> {
     }
 
     @Override
-    public Renderer<T> getRenderer() {
+    public Renderer<T, Shader> getRenderer() {
         return renderer;
     }
 

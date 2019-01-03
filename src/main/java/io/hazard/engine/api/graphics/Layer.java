@@ -6,7 +6,7 @@ public interface Layer<T extends Renderable> {
 
     String getId();
 
-    Renderer<T> getRenderer();
+    Renderer<T, Shader> getRenderer();
 
     Set<T> getRenderables();
 
