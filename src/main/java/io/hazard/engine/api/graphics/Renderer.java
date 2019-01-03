@@ -1,10 +1,10 @@
 package io.hazard.engine.api.graphics;
 
-public interface Renderer<T extends Renderable> {
+public interface Renderer<T extends Renderable, S extends Shader> {
 
-    Shader getShader();
+    S getShader();
 
-    void setShader(Shader shader);
+    void setShader(S shader);
 
     void render(T renderable);
 

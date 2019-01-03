@@ -4,8 +4,11 @@ import org.joml.Vector2i;
 
 public interface Texture {
 
-    Integer[] getData();
+    void bind();
+
+    void setData(int[] data);
 
     Vector2i getSize();
 
+    void setSize(Vector2i size);
 }

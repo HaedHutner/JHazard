@@ -2,7 +2,8 @@ package io.hazard.game;
 
 import io.hazard.engine.api.game.GameState;
 
-public class EmptyGameState implements GameState {
+public class DefaultGameState implements GameState {
+
     @Override
     public String getId() {
         return "empty-game-state";

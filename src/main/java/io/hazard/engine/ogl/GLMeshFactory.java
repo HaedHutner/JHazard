@@ -5,14 +5,14 @@ import io.hazard.engine.api.graphics.Mesh;
 import io.hazard.engine.api.graphics.MeshFactory;
 
 @Singleton
-public class GLMeshFactory implements MeshFactory {
+public class GLMeshFactory implements MeshFactory<GLMesh> {
     @Override
-    public Mesh fromFile(String path) {
+    public GLMesh fromFile(String path) {
         return null;
     }
 
     @Override
-    public Mesh fromMemory(float[] positions, float[] uv, float[] normals) {
+    public GLMesh create(float[] positions, float[] uv, float[] normals) {
         return null;
     }
 }

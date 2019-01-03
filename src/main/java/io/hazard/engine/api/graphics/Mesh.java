@@ -1,15 +1,16 @@
 package io.hazard.engine.api.graphics;
 
-public interface Mesh {
+public interface Mesh<T extends Texture> {
 
-    void setPositions(float[] positions);
+    T getTexture();
 
-    void setUVs(float[] uv);
+    void setTexture(T texture);
 
-    void setNormals(float[] normals);
+    void bind();
 
-    Texture getTexture();
+    void render();
 
-    void setTexture(Texture texture);
+    int getElementsSize();
 
+    int getVerticesSize();
 }

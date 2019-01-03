@@ -1,9 +1,7 @@
 package io.hazard.engine.api.graphics;
 
 import org.joml.Matrix4d;
-import org.joml.Vector2d;
 import org.joml.Vector3d;
-import org.joml.Vector3f;
 
 public interface Camera {
 
@@ -13,16 +11,16 @@ public interface Camera {
 
     Vector3d getPosition();
 
-    Vector2d getYawAndPitch();
+    Vector3d getDirection();
 
-    void translateBy(Vector3d translation);
+    void translateBy(double x, double y, double z);
 
-    void rotateBy(double yaw, double pitch);
+    void rotateBy(double yaw, double pitch, double roll);
 
-    Vector3f getUp();
+    Vector3d getUp();
 
-    Vector3f getRight();
+    Vector3d getRight();
 
-    Vector3f getFront();
+    Vector3d getFront();
 
 }

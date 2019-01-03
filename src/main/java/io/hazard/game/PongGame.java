@@ -7,11 +7,6 @@ public class PongGame extends HazardGame {
 
     public PongGame(Window window) {
         super(window);
-        setState(new EmptyGameState());
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
+        setState(new DefaultGameState());
     }
 }

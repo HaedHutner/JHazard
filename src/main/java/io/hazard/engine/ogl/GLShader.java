@@ -3,6 +3,11 @@ package io.hazard.engine.ogl;
 import io.hazard.engine.api.graphics.Shader;
 
 public class GLShader implements Shader {
+
+    public GLShader(String vertexShaderSource, String fragmentShaderSource) {
+
+    }
+
     @Override
     public void setUniformVector2i(String name, int x, int y) {
 
@@ -50,6 +55,11 @@ public class GLShader implements Shader {
 
     @Override
     public void setUniformMatrix4d(String name, double[] data) {
+
+    }
+
+    @Override
+    public void use() {
 
     }
 }

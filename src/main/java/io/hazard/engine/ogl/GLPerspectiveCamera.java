@@ -5,7 +5,6 @@ import io.hazard.engine.api.graphics.Camera;
 import org.joml.Matrix4d;
 import org.joml.Vector2d;
 import org.joml.Vector3d;
-import org.joml.Vector3f;
 
 @Singleton
 public class GLPerspectiveCamera implements Camera {
@@ -40,17 +39,17 @@ public class GLPerspectiveCamera implements Camera {
     }
 
     @Override
-    public Vector3f getUp() {
+    public Vector3d getUp() {
         return null;
     }
 
     @Override
-    public Vector3f getRight() {
+    public Vector3d getRight() {
         return null;
     }
 
     @Override
-    public Vector3f getFront() {
+    public Vector3d getFront() {
         return null;
     }
 }

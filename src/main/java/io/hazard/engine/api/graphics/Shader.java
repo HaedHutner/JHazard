@@ -63,4 +63,6 @@ public interface Shader {
     default void setUniformMatrix4d(String name, Matrix4d mat4d) {
         setUniformMatrix4d(name, mat4d.get(new double[16]));
     }
+
+    void use();
 }

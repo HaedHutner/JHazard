@@ -8,11 +8,11 @@ public interface Layer<T extends Renderable> {
 
     Renderer<T> getRenderer();
 
-    Set<Model> getModels();
+    Set<T> getRenderables();
 
-    void addModel(Model model);
+    void addRenderable(T model);
 
-    void removeModel(Model model);
+    void removeRenderable(T model);
 
     void render();
 }

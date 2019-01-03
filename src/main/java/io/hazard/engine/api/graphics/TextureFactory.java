@@ -1,9 +1,11 @@
 package io.hazard.engine.api.graphics;
 
-public interface TextureFactory {
+public interface TextureFactory<T extends Texture> {
 
-    Texture fromFile(String path);
+    T fromResource(String resourcePath);
 
-    Texture fromMemory(Integer[] colors, int sizeX, int sizeY);
+    T fromFile(String path);
+
+    T create(int[] colors, int sizeX, int sizeY);
 
 }

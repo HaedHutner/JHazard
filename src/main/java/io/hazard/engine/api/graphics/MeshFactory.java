@@ -1,9 +1,11 @@
 package io.hazard.engine.api.graphics;
 
-public interface MeshFactory {
+public interface MeshFactory<T extends Mesh> {
 
-    Mesh fromFile(String path);
+    T fromResource(String resourcePath);
 
-    Mesh fromMemory(float[] positions, float[] uv, float[] normals);
+    T fromFile(String path);
+
+    T create(float[] positions, float[] uv, float[] normals);
 
 }
